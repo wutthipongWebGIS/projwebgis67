@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>401-WebGIS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">  
+<style>
+h1,h2 {
+  text-shadow: 0 0 2px #0933F0;
+}
+h3,h4{
+  text-weight:500;
+ 
+}
+h5{
+  text-weight:500;
+  color: #0933F0;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #6781C4;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #FFC700;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+table {
+  width: 100%;
+}
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #568DB9  ;
+  color: white;
+}
+#customers tr:hover {background-color: #ddd;}
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+	color: #F00;
+}
+a:active {
+	text-decoration: none;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+  <div class="navbar">
+    <a class="active" href="http://www.geog.pn.psu.ac.th/index.html"><i class="fa fa-fw fa-home"></i> Home</a> 
+     <a href=""><i class="fa fa-fw fa-search"></i> ระบบส่งงานออนไลน์</a> 
+     <a href="http://www.geog.pn.psu.ac.th/InterGIS63/IndeInterGis63.html"><i class="fa fa-fw fa-envelope"></i> โปรแกรม/ข้อมูลประกอบ  </a> 
+   <a href="Virtual_tour/krusae2.html">เอกสารตกแต่งเว็บ </a>     
+   <a href="FrameworkGIS/Indexframe.html"><i class="fa fa-fw fa-user"></i>Source code </a>
+  </div>
+<br>
+<br>
+  <h2>รายการเอกสารบทเรียนออนไลน์ Internet GIS    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ภาคการศึกษา 2/2567</h2>
+  <h4>ผศ.วุฒิพงษ์  แสงมณี </h4>
+  <p align="center"><font color="#1D14E2">คลิกเพื่อเลือกเปิดรายการต่าง ๆ </font></p>            
+  
+<table id="customers">
+  <tr>
+    <th colspan="2">หน่วยการเรียนรู้/แผนการสอน</th>
+    <th width="14%">เอกสารคำสอน(pdf)</th>
+    <th width="9%">Powerpoint</th>
+    <th width="17%">VDOประกอบการสอน</th>
+  </tr>
+  <tr>
+    <td height="40" colspan="2"><a href="มคอ3IntenetGIS64.pdf"><b><font color="#0000FF">รายละเอียดรายวิชา 426-401 (มคอ.3)</font></b>  </a>      </td>
+    <td height="40"><a href="มคอ3IntenetGIS64.pdf"> มคอ. 3</a></td>
+    <td height="40">&nbsp;</td>
+    <td height="40">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="40" colspan="2"> <h5><b>เตรียมความพร้อม : ติดตั้งโปรแกรมก่อนเรียน </b></h5>  </td>
+    <td height="40"></td>
+    <td height="40">&nbsp;</td>
+    <td height="40">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td height="40"> <a href="https://www.sublimetext.com/3">  ดาวน์โหลดโปรแกรม Sublime text3</a>&nbsp;&nbsp;|ติดตั้ง Package Control ให้ Sublime v.3&nbsp;&nbsp;|&nbsp;<a href="https://packagecontrol.io/installation">ดาวน์โหลด package </a>&nbsp;&nbsp;| <a href="https://www.ba-na-na.net/วิธีติดตั้ง-package-control-สำหรับ-sublime-text/">วิธีติดตั้ง </a>     </td>
+   <td valign="top">  </td>
+   <td valign="top">  </td>
+    <td valign="top"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td height="40" colspan="4"><a href="https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/"> ดาวน์โหลด XAMPP </a>|&nbsp;&nbsp;<a href="VDOpage/xampp_index.html"> แก้ปัญหา XAMPP Apache ไม่ทำงาน/login phpMyAdmin ไม่ได้ </a>&nbsp;&nbsp;| <a href="https://www.youtube.com/watch?v=1Rq5bH7dXAU&ab_channel=โมไมย">MySQL ไม่ทำงาน </a>&nbsp;|<a href="https://www.youtube.com/watch?v=SvyrtBEvIY4&ab_channel=สารพันคอมพิวเตอร์">1 &nbsp;</a>| <a href="https://www.youtube.com/watch?v=lliLjCuSRxQ&t=1420s&ab_channel=DwThai.Com">2 &nbsp;</a>  </td>
+  </tr>
+<tr>
+    <td>&nbsp;</td>
+    <td height="40" colspan="4"><a href="https://code.visualstudio.com/download">ดาวน์โหลดโปรแกรม Visual Studio Code | </a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td height="40"> โปรแกรม Dreamweaver CS6 </td>
+   <td valign="top">  </td>
+   <td valign="top">  </td>
+    <td valign="top"><a href="">  </a></td>
+  </tr>
+
+  <tr>
+    <td height="40" colspan="2"><b><font color="#0000FF">หน่วยการเรียนที่ 1 เทคโนโลยีภูมิสารสนเทศบนเครือข่ายอินเทอร์เน็ต</font></b>        </td>
+    <td height="40"><a href="http://www.geog.pn.psu.ac.th/TextTOR65/คำสอน/Unit1_วิชชา.pdf"> เอกสารคำสอน</a></td>
+    <td height="40" align="center">&nbsp;<a href="http://www.geog.pn.psu.ac.th/TextTOR65/ประกอบสอน/1IntroAerial65.pdf">PPT</a></td>
+    <td height="40">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td height="40" colspan="4"><a href="https://www.w3schools.com/html/html_tables.asp">นิยามและขอบข่ายรายวิชา</a></td>
+    </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td height="40" colspan="4"><a href="https://www.w3schools.com/html/html_images.asp">เทคโนโลยีสำหรับการทำแผนที่ออนไลน์ </a></td>
+    </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td height="40" colspan="4"><a href="https://www.w3schools.com/html/html_links.asp">Client/Server สำหรับระบบภูมิสารสนเทศ </a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td height="40" colspan="4"><a href="https://web.mit.edu/11.520/www/lectures/internet_gis08_slides.pdf">Distributed Systems สำหรับระบบภูมิสารสนเทศ </a></td>
+  </tr>
+
+  <tr>
+    <td width="3%">&nbsp;</td>
+    <td height="40" colspan="4">&nbsp; &nbsp; <a href="https://developers.google.com/maps/documentation/javascript/examples">คลังโปรแกรมGoogle maps javaScript </a>&nbsp;| &nbsp;<a href="https://leafletjs.com/index.html">คลังโปรแกรมโอเพนซอร์ส Leaflet JavaScript </a></td>
+    </tr>
+  <tr>
+    <td height="40" colspan="2"><b><font color="#0000FF">หน่วยการเรียนที่ 2 การออกแบบโปรแกรมบนเว็บ</font></b>        </td>
+    <td height="40"><a href=""> เอกสารคำสอน</a></td>
+    <td height="40" align="center">&nbsp;<a href="">PPT</a></td>
+    <td height="40">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="40">&nbsp;</td>
+    <td height="40" colspan="4">ER-Model และสถาปัตยกรรมฐานข้อมูล</td>
+  </tr>
+  <tr>
+    <td height="40">&nbsp;</td>
+    <td height="40" colspan="4">สถาปัตยกรรมระบบสำหรับการพัฒนาระบบภูมิสารสนเทศบนเว็บ</td>
+  </tr>
+  <tr>
+    <td height="40">&nbsp;</td>
+    <td height="40" colspan="4">WebGIS Portal </a></td>
+  </tr>  
+  <tr>
+    <td height="40" colspan="2"><b><font color="#0000FF">หน่วยการเรียนที่ 3 เครื่องมือในการพัฒนาเว็บ (Web development tool)</font></b>       </td>
+    <td height="40"><a href=""> เอกสารคำสอน</a></td>
+    <td height="40" align="center">&nbsp;<a href="">PPT</a></td>
+    <td height="40">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td height="40"><strong>HTML : </strong><strong>H</strong>yper <strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage</td>
+    <td ></td>
+    <td ></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td width="3%">&nbsp;</td>
+    <td height="40" width="57%">&nbsp;&nbsp;<a href="https://www.w3schools.com/html/html_tables.asp">ตาราง </a> &nbsp;| &nbsp;<a href="https://www.w3schools.com/html/html_images.asp">รูปภาพ </a> | &nbsp; <a href="https://www.w3schools.com/html/html_links.asp">การเชื่อมโยง Link </a>&nbsp;| &nbsp;<a href="https://www.w3schools.com/html/html_iframe.asp">iframe กรอบย่อย </a>&nbsp;| &nbsp;<a href="https://www.w3schools.com/html/html_forms.asp">From </a> &nbsp;| &nbsp;<a href="https://www.w3schools.com/html/html_div.asp">Div </a> &nbsp;| &nbsp;<a href="https://www.computerhope.com/htmcolor.htm">เลือกสี </a></td>
+    <td >   </td>
+    <td ></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td width="3%">&nbsp;</td>
+    <td height="40" width="57%">&nbsp;&nbsp;<a href="https://www.w3schools.com/html/html5_video.asp">Video </a> &nbsp;| &nbsp;<a href="https://www.w3schools.com/html/html5_audio.asp">เสียง/Audio </a> | &nbsp; <a href="https://www.w3schools.com/html/html5_geolocation.asp">Get พิกัดภูมิศาสตร์ </a>&nbsp;| &nbsp;<a href="https://www.w3schools.com/html/html5_draganddrop.asp">Drag/Drop ลาก/วาง </a>&nbsp;| &nbsp;<a href="https://www.w3schools.com/tags/ref_colornames.asp">ชื่อค่าสี </a> &nbsp;|   </td>
+    <td >   </td>
+    <td ></td>
+    <td></td>
+  </tr>
+   <tr>
+     <td width="3%">&nbsp;</td>
+     <td height="40" width="57%">&nbsp;&nbsp;<a href="https://www.w3schools.com/tags/tag_u.asp">U/ขีดเส้นใต้ </a> &nbsp;| &nbsp;<a href=" https://www.w3schools.com/tags/tag_ul.asp">ul </a> | &nbsp; <a href="https://www.w3schools.com/tags/tag_li.asp">li </a>&nbsp;| &nbsp;<a href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_sup_default_css">sup/ตัวยก </a>&nbsp;| &nbsp;<a href="https://www.w3schools.com/tags/tag_ol.asp">ลำดับที่/ol </a> &nbsp;| &nbsp;<a href="https://www.w3schools.com/tags/tag_hn.asp">H1 to h6 </a>   </td>
+     <td >   </td>
+     <td ></td>
+     <td></td>
+   </tr>
+ <tr>
+   <td>&nbsp;</td>
+   <td height="40"><strong>CSS : Cascading Style Sheets</strong></td>
+   <td ></td>
+   <td ></td>
+   <td></td>
+ </tr>
+ <tr>
+    <td width="3%">&nbsp;</td>
+    <td height="40" width="57%">&nbsp;&nbsp;<a href="https://www.w3schools.com/css/css_syntax.asp">รูปแบบ Syntax </a> &nbsp;|&nbsp; <a href="https://www.w3schools.com/html/html_tables.asp">ตาราง </a> &nbsp;| &nbsp;<a href="https://www.w3schools.com/w3css/w3css_tables.asp">สลับสีระหว่างแถว </a> | &nbsp; <a href="https://www.w3schools.com/css/css_text_shadow.asp">สีเงาตัวอักษร </a>&nbsp;| &nbsp;<a href="https://www.w3schools.com/w3css/w3css_padding.asp">Padding </a> &nbsp;| &nbsp;<a href="https://www.w3schools.com/w3css/w3css_margins.asp">Margins </a>    </td>
+    <td >   </td>
+    <td ></td>
+    <td></td>
+ </tr>
+  <tr>
+    <td width="3%">&nbsp;</td>
+    <td height="40" width="57%">&nbsp;&nbsp;<a href="https://www.w3schools.com/html/html_tables.asp">Login </a> &nbsp;| &nbsp;<a href="https://www.w3schools.com/w3css/w3css_layout.asp">Layout </a> | &nbsp; <a href="https://www.w3schools.com/w3css/w3css_buttons.asp">Buttons </a>&nbsp;| &nbsp;<a href="https://www.w3schools.com/w3css/w3css_modal.asp">Modal/ปุ่มหมายเหตุ </a> &nbsp;| &nbsp;<a href="https://www.w3schools.com/w3css/w3css_tooltips.asp">tooltip </a>    </td>
+    <td >   </td>
+    <td ></td>
+    <td></td>
+ </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td height="40"><strong>Javascript : </strong></td>
+    <td ></td>
+    <td ></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td height="40"> &nbsp;&nbsp;&nbsp;<a href="https://www.w3schools.com/js/js_syntax.asp"> รูปแบบ Syntax</a>&nbsp;|&nbsp;&nbsp;<a href="https://www.w3schools.com/js/js_graphics_google_chart.asp">Google chart </a>|&nbsp;&nbsp;<a href="https://www.w3schools.com/js/js_json_php.asp"> JSON PHP</a> &nbsp;</td> 
+    <td ></td>
+    <td ></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td width="3%">&nbsp;</td>
+    <td height="40" width="57%">&nbsp;&nbsp;<font color="blue"><b>ตัวอย่าง Bootstap </b></font><a href="https://www.w3schools.com/bootstrap5/bootstrap_grid_system.php">&nbsp;| Grid/คอลัมภ์ </a> &nbsp;| &nbsp;<a href="https://www.w3schools.com/bootstrap5/bootstrap_forms.php">Form </a> | &nbsp; <a href="https://www.w3schools.com/bootstrap5/bootstrap_navbar.php">เมนู/รายการ </a>&nbsp;| &nbsp;<a href="https://www.w3schools.com/bootstrap5/bootstrap_pagination.php">Pagination/แถบเลข/หน้า </a><br>&nbsp;&nbsp;&nbsp;| &nbsp;Multi-markers icon     </td>
+    <td >   </td>
+    <td ></td>
+    <td></td>
+ </tr>
+ <tr>
+    <td height="40" colspan="2"><b><font color="#0000FF">หน่วยการเรียนที่ 4 ภาษา PHP, MySQL และ SQL ในงานฐานข้อมูล
+      </font></b>        </td>
+    <td height="40"></td>
+    <td height="40" align="right"><a href=""> &nbsp;<font color="blue">PPT </font></a></td>
+    <td height="40">&nbsp;&nbsp;<a href="data2566/apikey.txt"> KEY API</a> </td>
+ </tr>
+ <tr>
+    <td height="40" colspan="2"><b><font color="#0000FF">&nbsp;&nbsp; Unit 4.1 ภาษา PHP กับฐานข้อมูล : ตัวอย่าง source code 
+      </font></b>        </td>
+    <td height="40"></td>
+    <td height="40" align="right"></td>
+    <td height="40">&nbsp;&nbsp; </td>
+  </tr>
+  <tr>
+    <td width="3%">&nbsp;</td>
+    <td valign="center" height="40" width="57%">  &nbsp;&nbsp;MySQL Database  &nbsp; |<font color="blue"><a href="https://www.w3schools.com/php/php_mysql_intro.asp"> &nbsp; What is MYSQL </a>&nbsp;| &nbsp; <font color="blue"><a href="Dtabasesource/intro_db.html"> &nbsp; Create a MySQL Database </a>&nbsp; </td>
+    <td valign="center">  </td>
+    <td valign="center"></td>
+    <td valign="center">  </td>
+  </tr>
+ <tr>
+    <td width="3%">&nbsp;</td>
+    <td valign="center" height="40" width="57%">   <a href="provinceMap/Politicdata.rar">การนำเข้า </a> | &nbsp;&nbsp;<a href="databaseCode/frminser1.txt">ADD_insert |&nbsp;<a href="databaseCode/insert1A.txt">Pageinsert </a>|&nbsp; |<a href="testdatabase/provinceList.txt"> แสดงผลข้อมูล </a> &nbsp;&nbsp;|<a href="databaseCode/listdata.php"> Lesson_list </a>&nbsp; &nbsp; | &nbsp; การค้นหา &nbsp;| &nbsp;การลบข้อมูล &nbsp;| &nbsp;การปรับแก้/Update &nbsp; | &nbsp; Login/logout &nbsp;   </td>
+    <td valign="center">  </td>
+    <td valign="center"></td>
+    <td valign="center"> <a href="">  </a> </td>
+  </tr>
+
+   <tr>
+    <td width="3%">&nbsp;</td>
+    <td valign="center" height="40" width="57%">  &nbsp;&nbsp;การค้นหา  &nbsp; |<font color="blue"><a href="databaseCode/Lesson_search1.html"> &nbsp; Page1 </a>&nbsp;| &nbsp; <font color="blue"><a href="databaseCode/Lesson_search2.html"> &nbsp; Page2 </a>&nbsp; </td>
+    <td valign="center">  </td>
+    <td valign="center"></td>
+    <td valign="center">  </td>
+  </tr>
+ <tr>
+    <td width="3%">&nbsp;</td>
+    <td valign="center" height="40" width="57%">  &nbsp;&nbsp;การเลือกค้นข้อมูลจังหวัด อำเภอ ตำบล หมู่บ้าน  &nbsp; <font color="blue"><a href="data2566/politicSelectoption2.txt">โค้ดประกอบ </a>  </td>
+    <td valign="center">  </td>
+    <td valign="center"></td>
+    <td valign="center"> <a href=""> วีดิทัศน์ /VDO 3 </a> </td>
+  </tr>
+   <tr>
+    <td width="3%">&nbsp;</td>
+    <td valign="center" height="40" width="57%">  &nbsp;&nbsp;ระบบ Upload ไฟล์และแสดงข้อมูลรูปภาพ &nbsp; <font color="blue"><a href="data2566/upload.txt">โค้ด upload </a></font>&nbsp;| &nbsp;<font color="blue"><a href="data2566/pagnition.txt">แบ่งหน้าข้อมูล </a></font>  </td>
+    <td valign="center">  </td>
+    <td valign="center"></td>
+    <td valign="center"> <a href=""> วีดิทัศน์ /VDO 3 </a> </td>
+  </tr>
+ <tr>
+    <td width="3%">&nbsp;</td>
+    <td valign="center" height="40" width="57%">  &nbsp;&nbsp;การค้นหาข้อมูลแบบ Autocomplet    </td>
+    <td valign="center">  </td>
+    <td valign="center"></td>
+    <td valign="center"> <a href=""> วีดิทัศน์ /VDO 3 </a> </td>
+  </tr>
+
+ <tr>
+    <td width="3%">&nbsp;</td>
+    <td valign="center" height="40" width="57%">  &nbsp;&nbsp;การสร้างกราฟแสดงข้อมูล &nbsp;| &nbsp;<font color="blue"><a href="data2566/tbl_marks.txt">ข้อมูลนำเข้า Db </a> &nbsp;| &nbsp;<a href="data2566/ChartDb_Con.txt">เชื่อมต่อฐานข้อมูล </a> &nbsp;| &nbsp;<a href="data2566/ChartShow.txt">เแสดงกราฟ </a>&nbsp;| &nbsp;<a href="data2566/Chart.min.js">Librart 1 </a></td>
+    <td valign="center"> &nbsp;| &nbsp;<a href="data2566/jquery.min.js">Librart 2 </a> </td>
+    <td valign="center"></td>
+    <td valign="center"> <a href="">  </a> </td>
+  </tr>
+
+  <tr>
+    <td height="40">&nbsp;</td>
+    <td height="40" colspan="4"><strong><font color="blue">ชุดข้อมูลประกอบการฝึกปฏิบัติ </font> : Download</strong></td>
+  </tr>  
+ <tr>
+    <td width="3%">&nbsp;</td>
+    <td valign="center" height="40" width="57%">  &nbsp;<a href="data2566/politicaldata.rar">ข้อมูลการปกครอง</a> &nbsp;[จังหวัด / จังหวัด (ค่าพิกัด) /อำเภอ/ตำบล/หมู่บ้าน(5 จ.ชายแดนใต้) <font color="red">รวม 5 แฟ้ม</font>]    </td>
+    <td valign="center">  </td>
+    <td valign="center"></td>
+    <td valign="center">  </td>
+  </tr>
+  <tr>
+    <td height="40">&nbsp;</td>
+    <td height="40" colspan="4"><a href="https://www.thaicreate.com/php/php-mysql-mysqli.html"><strong><font color="blue">แหล่งเรียนรู้เพิ่มเติม (mysqli) </font></strong></a> </td>
+  </tr> 
+
+<tr>
+    <td height="40" colspan="3"><b><font color="#0000FF">หน่วยการเรียนที่ 5 Google map API javascript
+      </font></b>        </td>
+    <td height="40" colspan="2"><a href="lessonwebgis/IndexUnit5.html"> ดูรายละเอียดบทเรียน.. >></a></td>
+    
+  </tr>
+<tr>
+    <td height="40" colspan="2"><b><font color="#0000FF">หน่วยการเรียนที่ 6 การพัฒนาสารสนเทศภูมิศาสตร์บนอินเทอร์เน็ต
+      </font></b>        </td>
+    <td height="40"><a href="http://www.geog.pn.psu.ac.th/TextTOR65/คำสอน/Unit7_Mapping.pdf"> เอกสารคำสอน</a></td>
+    <td height="40">&nbsp; </a></td>
+    <td height="40">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="3%">&nbsp;</td>
+    <td valign="center" height="40" width="57%">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การสกัดค่าพิกัดภูมิศาสตร์บน google map ลงฐานข้อมูล &nbsp;&nbsp;|&nbsp;<a href="data2566/Inputpoi_2mapt.txt">เรียกค่าพิกัดGooglemap</a>&nbsp;|&nbsp;<a href="data2566/Inputpoi_GetXYtmap.txt">บันทึกลงฐานข้อมูล</a>&nbsp;|&nbsp;<a href="data2566/jquery-1.11.2.min.js">JQuery</a></td>
+    <td valign="center">  </td>
+    <td valign="center"></td>
+    <td valign="center"> <a href="http://www.geog.pn.psu.ac.th/TextTOR65/VDO/Layout1.mp4"> วีดิทัศน์ /VDO  </a> </td>
+  </tr>
+  <tr>
+    <td width="3%">&nbsp;</td>
+    <td valign="center" height="40" width="57%">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การเชื่อมโยงและแสดงข้อมูลบนแผนที่ google map &nbsp;&nbsp;|&nbsp;<a href="data2566/DbMySQL2map.txt">เชื่อมโยงฐานข้อมูล</a>&nbsp;|&nbsp;<a href="data2566/DbMySQL2showon_map.txt">แสดงข้อมูลบนแผนที่</a></td>
+    <td valign="center">  </td>
+    <td valign="center"></td>
+    <td valign="center"> <a href="http://www.geog.pn.psu.ac.th/TextTOR65/VDO/Layout1.mp4"> วีดิทัศน์ /VDO  </a> </td>
+  </tr>
+ <tr>
+    <td width="3%">&nbsp;</td>
+    <td valign="center" height="40" width="57%">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Select option/แสดงแผนที่&nbsp;&nbsp;|&nbsp;<a href="data2566/provinceOption.docx">แผนที่หลัก</a> &nbsp;|&nbsp;<a href="data2566/Mapprovjquery.min.js">library</a> &nbsp;|&nbsp;<a href="data2566/genProvth1.docx">Connect Db</a>   </td>
+    <td valign="center">  </td>
+    <td valign="center"></td>
+    <td valign="center"> </td>
+  </tr>
+   <tr>
+    <td width="3%">&nbsp;</td>
+    <td valign="center" height="40" width="57%">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Select/แผนที่เส้นทาง&nbsp;&nbsp;|&nbsp;<a href="data2566/DirectionrouteMap3.txt">แผนที่เส้นทางการเดินทาง</a> &nbsp;|&nbsp;   </td>
+    <td valign="center">  </td>
+    <td valign="center"></td>
+    <td valign="center"> </td>
+  </tr>
+  <tr>
+    <td width="3%">&nbsp;</td>
+    <td valign="center" height="40" width="57%">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การส่งออกสารสนเทศแผ่นระวางแผนที่ (Layout)    </td>
+    <td valign="center">  </td>
+    <td valign="center"></td>
+    <td valign="center"> <a href="http://www.geog.pn.psu.ac.th/TextTOR65/VDO/Layout1.mp4"> วีดิทัศน์ /VDO  </a> </td>
+  </tr>
+  <tr>
+    <td width="3%">&nbsp;</td>
+    <td valign="center" height="40" width="57%"><font color="blue">  <b>ตัวอย่าง Project Internet GIS </b></font> &nbsp;&nbsp;&nbsp;|<a href="https://plludds.dpt.go.th/landuse/" target="new"> กรมโยธาธิการผังเมือง </a> &nbsp;|&nbsp;<a href="https://gis.finearts.go.th/fineart/" target="new">กรมศิลปากร </a> &nbsp;|<br>&nbsp;<a href="https://marinemap.dmcr.go.th/" target="new"> กรมทรัพยากรทะเลและชายฝั่ง </a> |&nbsp;<a href="https://landsmaps.dol.go.th/" target="new"> แปลงที่ดิน:กรมที่ดิน </a>| &nbsp;<a href="https://gis.dwr.go.th/portal/home/webmap/viewer.html?webmap=0e9ef17720a54344bd3ed8848ae7c8cc&extent=85.4091,4.4984,117.8627,21.901" target="new">พื้นที่ชลประทาน </a> |&nbsp;<a href="https://gis.dwr.go.th/portal/home/" target="new"> กรมทรัพยากรน้ำ </a>| &nbsp;<br>&nbsp;<a href="https://agri-map-online.moac.go.th/" target="new"> Agri-Map </a> | &nbsp;<a href="https://ngis.go.th/" target="new"> คณะกรรมการภูมิสารสนเทศแห่งชาติ </a> </td>
+    <td valign="center">  </td> 
+    <td valign="center"></td>
+    <td valign="center"> <a href=""> </a> </td>
+  </tr>
+  <tr>
+    <td width="3%">&nbsp;</td>
+    <td valign="center" height="40" width="57%"><font color="blue"> <b>Download Landsat data</b> </font>&nbsp;&nbsp;&nbsp;|<a href="https://earthexplorer.usgs.gov/" target="new"> USGS Exploer </a> &nbsp;|&nbsp;<a href="https://libra.developmentseed.org/" target="new">Libra.org </a> &nbsp;|<br>&nbsp;<a href="https://dataspace.copernicus.eu//" target="new"> ESA’s Sentinel Satellite data </a>  </td>
+    <td valign="center">  </td> 
+    <td valign="center"></td>
+    <td valign="center"> <a href="https://www.youtube.com/watch?v=UuE8tFYz6q0"> VDO USGS </a> </td>
+  </tr>
+</table>
+</div>
+<hr>
+<footer class="w3-container w3-teal w3-center w3-margin-top">
+  <p></p>
+  <p>ออกแบบและจัดทำโดย  ผศ.วุฒิพงษ์  แสงมณี</p>
+</footer>
+</body>
+</html>
